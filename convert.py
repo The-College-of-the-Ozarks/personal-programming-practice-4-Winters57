@@ -20,8 +20,19 @@ def mph_to_fts(mph):
 mph = input("Input speed in mph: ")
 mph = float(mph)
 
-print("Speed in kph is", mph_to_kph(mph))
+sel = input("------------------------\nPlease choose which unit you wish to convert mph to. \n kph: \n m/s: \n ft/s:\n------------------------\nunit: ")
 
-print("Speed in m/s is", mph_to_ms(mph))
+if sel == "kph":
+    
+    print("Speed in kph is", mph_to_kph(mph))
 
-print("Speed in ft/s is", mph_to_fts(mph))
+elif sel == "m/s":
+
+    print("Speed in m/s is", mph_to_ms(mph))
+    
+elif sel == "ft/s":
+
+    print("Speed in ft/s is", mph_to_fts(mph))
+    
+else:
+    print("Incorrect conversion unit input, run again")
